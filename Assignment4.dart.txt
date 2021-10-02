@@ -1,0 +1,193 @@
+
+//ASSIGNMENT 4
+
+ 
+// 2) To make a function that take a number as parameter, 
+// and print the table of that number.
+
+void main() { 
+  
+  myfunc(5);
+  
+}  
+
+void myfunc (num a){
+  
+  for(var i=1; i<=10;i++){
+    print("${a} X ${i} = ${a*i}");
+
+  }
+}
+
+// 3) List lst = [2,4,6,8,9];
+// Make a function that takes a number as parameter and divide that parameter to every element
+// in the list
+
+void main (){
+  myfunc(2);
+  
+}
+
+
+dynamic myfunc(num n){
+  
+  List lst = [2,4,6,8,9];
+  
+  for (var i in lst){
+    print(i/n);
+  }
+
+
+}
+
+
+// 4) Make a function for printing mark sheet 
+// then Make a list of at-least 5 names and another list of
+// their marks, and print the mark sheet of all of them.
+
+void main (){
+  
+  func();
+  
+}
+
+dynamic func (){
+
+
+List<dynamic> lst1 = ['Sarfaraz','Amir','Fakhar','Wahab','Shoaib'];
+  
+List <dynamic> lst2 = [400,420,390,450,360];
+  
+var  map1 = Map.fromIterables(lst1,lst2);
+  
+
+
+
+// 5) Make a function in class and then call it outside class.
+
+
+void main (){
+  var ins = Human();
+  ins.myfunc();
+}
+
+class Human {
+  dynamic myfunc (){
+    var a =1;
+    var b =2;
+    print(a+b);
+  }
+} 
+
+
+
+// 6) Print your name in a sentence using classes.
+
+
+void main (){
+  var ins = Name();
+  ins.myfunc();
+}
+
+class Name {
+  dynamic myfunc (){
+ var a = "My Name is Ahmed Ali Abdul Aziz";
+    print(a);
+  }
+} 
+
+
+void main(){
+  
+//   ab jb sara kam hogaya to call bh to karaingy class ko
+  
+//   class ko call karaty hyn usky instance me yani var bana kr 
+  
+//   child ku under Parent ki properties hoti hyn to child ka 
+//   instance banay ga
+  
+  var ins = Circle();
+  ins.dis();
+  ins.cir();
+  
+  
+  var ins1 = Square();
+  ins1.dis();
+  ins1.sq();
+
+  
+  
+  
+
+}
+// simple Inheritance
+class Shape{
+  
+  dynamic dis (){
+print("This is a Parent class");
+    }
+
+}
+
+// yani meri circle ki class ko inherit krdo shape
+class Circle extends Shape{
+ 
+  dynamic cir (){
+    print("Circle is a Child class of Shape and inherit by key word extends");
+    
+
+  }
+  
+}
+
+class Square extends Shape {
+ 
+  dynamic sq (){
+    print("Square is a Child class of Shape and inherit by key word extends");
+    
+
+  }
+}
+
+
+// 7) Make a constructor that requires your name, age, 
+// education and then print that.
+
+// CONTRUCTOR
+
+
+
+void main() {
+  Learner me = Learner( name: "Ahmed Ali Abdul Aziz",age: 24);
+  me.sayMyName();
+}
+
+class Learner {
+  int age;
+  String name;
+
+
+  Learner({required this.name, required this.age});
+
+  void sayMyName() {
+    
+    print("My name is $name");
+    print("My age is $age");
+ 
+  }
+}
+
+
+
+
+
+
+ 
+  
+  for (MapEntry i in map1.entries){
+    print("[${i.key}]---Obtains---[${i.value}]---Marks");
+  
+  }
+}
+
+
